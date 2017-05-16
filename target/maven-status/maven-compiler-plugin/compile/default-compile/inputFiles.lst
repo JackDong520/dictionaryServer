@@ -1,0 +1,11 @@
+E:\dictionaryServer\src\main\java\Controller\Controller.java
+E:\dictionaryServer\src\main\java\db\DBAccess.java
+E:\dictionaryServer\src\main\java\javabeans\PosEntity.java
+E:\dictionaryServer\src\main\java\javabeans\UserEntity.java
+E:\dictionaryServer\src\main\java\Controller\Application.java
+E:\dictionaryServer\src\main\java\javabeans\MissingEntity.java
+E:\dictionaryServer\src\main\java\javabeans\MeansEntity.java
+E:\dictionaryServer\src\main\java\service\WordService.java
+E:\dictionaryServer\src\main\java\service\WordServiceImpl.java
+E:\dictionaryServer\src\main\java\javabeans\WordsEntity.java
+E:\dictionaryServer\src\main\java\Dao\WordDAO.java

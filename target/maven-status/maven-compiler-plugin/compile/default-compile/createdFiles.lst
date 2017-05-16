@@ -1,0 +1,11 @@
+db\DBAccess.class
+Controller\Controller.class
+javabeans\MeansEntity.class
+Controller\Application.class
+service\WordServiceImpl.class
+javabeans\PosEntity.class
+Dao\WordDAO.class
+javabeans\UserEntity.class
+service\WordService.class
+javabeans\MissingEntity.class
+javabeans\WordsEntity.class
