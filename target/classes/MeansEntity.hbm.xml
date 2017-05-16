@@ -5,6 +5,7 @@
 <hibernate-mapping>
 
     <class name="javabeans.MeansEntity" table="means" schema="db_dictionary">
+        <id name="id"/>
         <property name="means">
             <column name="means" sql-type="varchar(1000)" length="1000" not-null="true"/>
         </property>

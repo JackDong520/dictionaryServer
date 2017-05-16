@@ -8,6 +8,7 @@ public class MeansEntity {
     private WordsEntity wordsByWordId;
     private PosEntity posByPosId;
 
+
     public String getMeans() {
         return means;
     }
@@ -47,5 +48,15 @@ public class MeansEntity {
 
     public void setPosByPosId(PosEntity posByPosId) {
         this.posByPosId = posByPosId;
+    }
+
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
