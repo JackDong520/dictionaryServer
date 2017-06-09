@@ -1,7 +1,7 @@
 package Dao;
 
 import db.DBAccess;
-import javabeans.WordsEntity;
+import javabeans.DictEntity;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
@@ -19,21 +19,19 @@ public class WordDAO {
     static {
         dbAccess = new DBAccess();
     }
-
-
-    public WordsEntity selectSinglePeople(String word) {
+    public DictEntity selectSingleWord(String word) {
         session = dbAccess.getSession();
         transaction = session.beginTransaction();
-        String hql = "from WordsEntity s where word = ?";
+        String hql = "from DictEntity s where word = ?";
         Query query = session.createQuery(hql).setParameter(0, word);
-        WordsEntity wordsEntity = (WordsEntity) query.getSingleResult();
+        DictEntity dictEntity = (DictEntity) query.getSingleResult();
         transaction.commit();
-        return wordsEntity;
+        return dictEntity;
     }
 
     @Test
     public void test (){
-        System.out.println(new WordDAO().selectSinglePeople("take").getWord().toString());
+        System.out.println(new WordDAO().selectSingleWord("take").getWord().toString());
     }
 
 }

@@ -1,208 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
     <root id="1"/>
     <schema id="2" parent="1" name="app_database">
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
-    <schema id="3" parent="1" name="db_dictionary">
-      <Visible>1</Visible>
-    </schema>
+    <schema id="3" parent="1" name="db_dictionary"/>
     <schema id="4" parent="1" name="information_schema"/>
-    <schema id="5" parent="1" name="jcsz">
-      <Visible>1</Visible>
-    </schema>
-    <schema id="6" parent="1" name="micro_message">
-      <Visible>1</Visible>
-    </schema>
+    <schema id="5" parent="1" name="jcsz"/>
+    <schema id="6" parent="1" name="micro_message"/>
     <schema id="7" parent="1" name="mysql"/>
     <schema id="8" parent="1" name="performance_schema"/>
     <schema id="9" parent="1" name="student_management"/>
     <schema id="10" parent="1" name="sys"/>
     <schema id="11" parent="1" name="test"/>
     <schema id="12" parent="1" name="ywst"/>
-    <table id="13" parent="2" name="studentinfo"/>
-    <table id="14" parent="3" name="means"/>
-    <table id="15" parent="3" name="missing"/>
-    <table id="16" parent="3" name="pos"/>
-    <table id="17" parent="3" name="user"/>
-    <table id="18" parent="3" name="words"/>
-    <table id="19" parent="6" name="message"/>
-    <table id="20" parent="6" name="student"/>
-    <column id="21" parent="13" name="Sid">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="22" parent="13" name="Sname">
-      <Position>2</Position>
-      <DataType>char(50)|0</DataType>
-    </column>
-    <column id="23" parent="13" name="Sintroduction">
-      <Position>3</Position>
-      <DataType>varchar(250)|0</DataType>
-    </column>
-    <key id="24" parent="13" name="PRIMARY">
-      <ColNames>Sid</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="25" parent="14" name="wordID">
-      <Position>1</Position>
-      <DataType>int(20)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="26" parent="14" name="posID">
-      <Position>2</Position>
-      <DataType>int(2)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="27" parent="14" name="means">
-      <Position>3</Position>
-      <DataType>varchar(1000)|0</DataType>
-    </column>
-    <index id="28" parent="14" name="fk_means_1_idx">
-      <ColNames>posID</ColNames>
-    </index>
-    <index id="29" parent="14" name="fk_means_1_idx1">
-      <ColNames>wordID</ColNames>
-    </index>
-    <foreign-key id="30" parent="14" name="fk_means_1">
-      <ColNames>wordID</ColNames>
-      <RefSchemaName>db_dictionary</RefSchemaName>
-      <RefTableName>words</RefTableName>
-      <RefColNames>ID</RefColNames>
-      <OnUpdate>no-action</OnUpdate>
-      <OnDelete>no-action</OnDelete>
-    </foreign-key>
-    <foreign-key id="31" parent="14" name="fk_means_2">
-      <ColNames>posID</ColNames>
-      <RefSchemaName>db_dictionary</RefSchemaName>
-      <RefTableName>pos</RefTableName>
-      <RefColNames>ID</RefColNames>
-      <OnUpdate>no-action</OnUpdate>
-      <OnDelete>no-action</OnDelete>
-    </foreign-key>
-    <column id="32" parent="15" name="ID">
-      <Position>1</Position>
-      <DataType>int(20)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="33" parent="15" name="word">
-      <Position>2</Position>
-      <DataType>varchar(200)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="34" parent="15" name="PRIMARY">
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="35" parent="16" name="ID">
-      <Position>1</Position>
-      <DataType>int(2)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="36" parent="16" name="name">
-      <Position>2</Position>
-      <DataType>varchar(20)|0</DataType>
-    </column>
-    <column id="37" parent="16" name="means">
-      <Position>3</Position>
-      <DataType>varchar(45)|0</DataType>
-    </column>
-    <key id="38" parent="16" name="PRIMARY">
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="39" parent="17" name="ID">
-      <Position>1</Position>
-      <DataType>int(50)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="40" parent="17" name="password">
-      <Position>2</Position>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <key id="41" parent="17" name="PRIMARY">
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="42" parent="18" name="ID">
-      <Position>1</Position>
-      <DataType>int(20)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="43" parent="18" name="word">
-      <Position>2</Position>
-      <DataType>varchar(100)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="44" parent="18" name="exchange">
-      <Position>3</Position>
-      <DataType>varchar(1000)|0</DataType>
-    </column>
-    <column id="45" parent="18" name="voice">
-      <Position>4</Position>
-      <DataType>varchar(1000)|0</DataType>
-    </column>
-    <column id="46" parent="18" name="times">
-      <Position>5</Position>
-      <DataType>int(20)|0</DataType>
-      <DefaultExpression>&apos;1&apos;</DefaultExpression>
-    </column>
-    <key id="47" parent="18" name="PRIMARY">
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="48" parent="19" name="ID">
+    <schema id="13" parent="1" name="dic_server">
+      <Visible>1</Visible>
+    </schema>
+    <table id="14" parent="13" name="dict"/>
+    <table id="15" parent="13" name="user"/>
+    <column id="16" parent="14" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="19" name="COMMAND">
+    <column id="17" parent="14" name="word">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="50" parent="19" name="DESCRIPTION">
+    <column id="18" parent="14" name="meaning">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="51" parent="19" name="CONTENT">
-      <Position>4</Position>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <key id="52" parent="19" name="PRIMARY">
-      <ColNames>ID</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="53" parent="20" name="sid">
+    <column id="19" parent="15" name="id">
       <Position>1</Position>
       <DataType>int(11) unsigned zerofill|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="54" parent="20" name="sname">
+    <column id="20" parent="15" name="user">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <column id="55" parent="20" name="gender">
+    <column id="21" parent="15" name="pwd">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
     </column>
-    <column id="56" parent="20" name="birthday">
-      <Position>4</Position>
-      <DataType>date|0</DataType>
-    </column>
-    <column id="57" parent="20" name="address">
-      <Position>5</Position>
-      <DataType>varchar(255)|0</DataType>
-    </column>
-    <key id="58" parent="20" name="PRIMARY">
-      <ColNames>sid</ColNames>
+    <key id="22" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

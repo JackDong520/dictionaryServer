@@ -4,12 +4,15 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="javabeans.UserEntity" table="user" schema="db_dictionary">
+    <class name="javabeans.UserEntity" table="user" schema="dic_server">
         <id name="id">
-            <column name="ID" sql-type="int(50)"/>
+            <column name="id" sql-type="int(11) unsigned zerofill"/>
         </id>
-        <property name="password">
-            <column name="password" sql-type="varchar(255)" not-null="true"/>
+        <property name="user">
+            <column name="user" sql-type="varchar(255)"/>
+        </property>
+        <property name="pwd">
+            <column name="pwd" sql-type="varchar(255)" not-null="true"/>
         </property>
     </class>
 </hibernate-mapping>

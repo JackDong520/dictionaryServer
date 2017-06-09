@@ -2,7 +2,7 @@ package service;
 
 
 import Dao.WordDAO;
-import javabeans.WordsEntity;
+import javabeans.DictEntity;
 import org.junit.Test;
 
 /**
@@ -16,8 +16,8 @@ public class WordServiceImpl implements WordService {
     }
 
     @Override
-    public WordsEntity selectSingleWordResult(String word) {
-        return  wordDAO.selectSinglePeople(word);
+    public DictEntity selectSingleWordResult(String word) {
+        return  wordDAO.selectSingleWord(word);
     }
 
     @Test

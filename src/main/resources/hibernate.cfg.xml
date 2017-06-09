@@ -4,18 +4,15 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/db_dictionary</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/dic_server</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.username">root</property>
+        <property name="connection.username">jackdong</property>
         <property name="connection.password">13584600</property>
         <property name="format_sql">true</property>
         <property name="show_sql">true</property>
-
-        <mapping resource="MeansEntity.hbm.xml"/>
-        <mapping resource="MissingEntity.hbm.xml"/>
-        <mapping resource="PosEntity.hbm.xml"/>
         <mapping resource="UserEntity.hbm.xml"/>
-        <mapping resource="WordsEntity.hbm.xml"/>
+        <mapping resource="DictEntity.hbm.xml"/>
+
         <!-- <property name="connection.username"/> -->
         <!-- <property name="connection.password"/> -->
 
